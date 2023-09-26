@@ -1,0 +1,48 @@
+@keyframes bgMotion {
+    0% {
+        background-position:bottom 0% left 0%;
+    }
+
+    50% {
+        background-position: bottom 100% right 50% ;
+    }
+    100% {
+        background-position: top 0% right 0%;
+    }
+}
+
+@keyframes bgBlur {
+    0% {
+        filter: brightness(1);
+    }
+
+    49% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(0);
+    }
+
+    51% {
+        filter: brightness(1);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+
+.animate-bg-motion {
+    animation: bgMotion 60s infinite ease;
+}
+
+
+.bg-waves {
+    @apply overflow-hidden relative;
+}
+.bg-waves:before {
+    @apply content-[''] w-full h-full absolute bg-[url('/src/assets/BackgroundPattern.png')] -z-10;
+    animation: bgBlur 20s infinite ease-in-out, bgMotion 90s infinite ease-in-out;
+}

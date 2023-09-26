@@ -6,7 +6,7 @@ function App() {
   return (
     <div id="app">
       <CourseList></CourseList>
-      <CertificateList></CertificateList>
+      {/* <CertificateList></CertificateList> */}
     </div>
   )
 }
